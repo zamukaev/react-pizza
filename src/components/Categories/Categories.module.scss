@@ -1,0 +1,140 @@
+.popUp {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		.list {
+			padding: 13px 25px;
+			margin-right: 10px;
+			flex: 1 0 auto;
+			font-weight: 700;
+			font-size: 16px;
+			line-height: 19px;
+			text-align: center;
+			letter-spacing: 0.015em;
+			color: #2C2C2C;
+			background: #F9F9F9;
+			border-radius: 30px;
+
+			&:last-child {
+				margin-right: 0px;
+			}
+		}
+
+		.list.active {
+			background: #282828;
+			border-radius: 30px;
+		}
+
+		.list.active{
+			color: #FFFFFF;
+		}
+
+		.list a {
+			color: #2C2C2C;
+		}
+}
+.select {
+	cursor: pointer;
+	position: relative;
+	top: 0;
+	right: 0;
+	.header {
+		.current {
+				position: relative;
+				font-weight: 700;
+				font-size: 14px;
+				line-height: 17px;
+				letter-spacing: 0.015em;
+				color: #2C2C2C;
+			&::before {
+				content: "";
+				position: absolute;
+				top: 6px;
+				left: -21px;
+				width: 10px;
+				height: 2px;
+				background: #000000;
+				transform: rotate(45deg);
+			}
+		
+			&::after {
+				content: "";
+				position: absolute;
+				top: 6px;
+				left: -15px;
+				width: 10px;
+				height: 2px;
+				background: #000000;
+				transform: rotate(-45deg);
+			}
+		}
+	}
+
+	.body {
+		opacity: 0;
+		visibility: hidden;
+		position: absolute;
+		top: 24px;
+		right: 0px;
+		background: #FFFFFF;
+		box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.09);
+		border-radius: 10px;
+		padding: 14px 0px 8px 0px;
+		.option {
+			padding: 10px 22px 10px 14px;
+			font-weight: 400;
+			font-size: 14px;
+			line-height: 17px;
+			letter-spacing: 0.015em;
+			color: #000000;
+
+
+			&:last-child {
+				margin-bottom: 0px;
+			}
+		}
+
+		.option.selected,
+		.current span {
+			color: #FE5F1E;
+			background: rgba(254, 95, 30, 0.05);
+		}
+	}
+
+	.option.selected,
+	.current span {
+		color: #FE5F1E;
+		background: rgba(254, 95, 30, 0.05);
+	}
+
+}
+.select.active{
+	.current {
+		&::before {
+			content: "";
+			position: absolute;
+			top: 8px;
+			left: -21px;
+			width: 10px;
+			height: 2px;
+			background: #000000;
+			transform: rotate(-45deg);
+		}
+	
+		&::after {
+			content: "";
+			position: absolute;
+			top: 8px;
+			left: -15px;
+			width: 10px;
+			height: 2px;
+			background: #000000;
+			transform: rotate(45deg);
+		}
+	}
+	.body{
+		opacity: 1;
+		visibility: visible;
+	}
+}

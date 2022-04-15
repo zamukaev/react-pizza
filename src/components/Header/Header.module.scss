@@ -1,0 +1,76 @@
+.header{
+	
+}
+.container{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 40px 40px;
+	border-bottom: 1px solid #F7F7F7;
+	.headerLeft{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		text-decoration-line: none;
+		.logo{
+			margin-right: 17px;
+		}
+		.row {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			.title {
+				font-style: normal;
+				font-weight: 800;
+				font-size: 24px;
+				line-height: 29px;
+				letter-spacing: 0.01em;
+				text-transform: uppercase;
+				color: #181818;
+			}
+			.text {
+				font-weight: 400;
+				font-size: 16px;
+				line-height: 19px;
+				color: #7B7B7B;
+			}
+		}
+	
+	}
+	.headerRight{
+		.row{
+			display: flex;
+			justify-content:space-between;
+			align-items: center;
+			background: #FE5F1E;
+			border-radius: 30px;
+			padding: 15px 23px;
+			text-decoration-line: none;
+			.totalCost{
+				border-right: 1px solid  rgba(255, 255, 255, 0.25);
+				padding-right: 13px;
+			}
+			.totalCost,.cartItem{
+				font-weight: 700;
+				font-size: 16px;
+				line-height: 19px;
+				color: #FFFFFF;
+				
+			}
+			.cartItem{
+				position: relative;
+				padding-left: 37px;
+			&::before{
+				content: "";
+				position: absolute;
+				background: url('../../static/icons/02.svg') no-repeat;
+				top: 0px;
+				right: 12px;
+				width: 20px;
+				height: 20px;
+				
+			}
+			}
+		}
+	}
+}
